@@ -32,12 +32,6 @@
   animation-iteration-count: infinite;
 }
 
-.animate-fadeIn {
-  animation-name: fadeIn;
-  animation-duration: 300ms;
-  animation-fill-mode: backwards;
-}
-
 .animate-float {
   animation-name: float;
   animation-duration: 4s;
