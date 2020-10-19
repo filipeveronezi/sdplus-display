@@ -36,8 +36,6 @@ body {
   margin-right: 24rem;
 
   box-shadow: 0 4px 18px 0 black;
-
-  cursor: crosshair;
 }
 
 .sdplus:before {
@@ -66,6 +64,11 @@ body {
   top: -55.4mm;
 
   transition: 1s;
+}
+
+.sdplus:hover {
+    animation-play-state: paused;
+    zoom: 1.15;
 }
 
 .logo-container {
@@ -193,3 +196,7 @@ body {
   transform: translateY(0.5px);
   box-shadow: none;
 }
+
+
+
+/* React e outros frameworks JS.. Design Patterns e arquitetura de software na prática, pelo que lembro vi mais teorias..  */

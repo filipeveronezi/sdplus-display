@@ -13,12 +13,15 @@
   }
 }
 
-@keyframes fadeIn {
-  from{
-    opacity: 0;
+@keyframes float {
+  0% {
+    transform: rotate(10deg) skew(10deg) translate(0, 0);
   }
-  to {
-    opacity: 1;
+  50% {
+    transform: rotate(10deg) skew(10deg) translateY(20px);
+  }
+  100% {
+    transform: rotate(10deg) skew(10deg) translate(0, 0);
   }
 }
 
@@ -33,4 +36,10 @@
   animation-name: fadeIn;
   animation-duration: 300ms;
   animation-fill-mode: backwards;
+}
+
+.animate-float {
+  animation-name: float;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
