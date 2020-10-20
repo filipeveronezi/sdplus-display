@@ -57,14 +57,6 @@ function removeBlink(element) {
   element.classList.remove("animate-blink");
 }
 
-function addFadeIn(element) {
-  element.classList.add("animate-fadeIn");
-}
-
-function removeFadeIn(element) {
-  element.classList.remove("animate-fadeIn");
-}
-
 // ON/OFF animation
 chkOnOff.onclick = async () => {
   // verify if checkbox is checked
@@ -111,8 +103,16 @@ chkOnOff.onclick = async () => {
     displayText1.textContent = "Treetech";
     displayText2.textContent = "Digital Systems";
 
-    // wait 5 seconds
-    await sleep(7000);
+    // wait 4 seconds
+    await sleep(4000);
+
+    // remove fade in animation from display text
+
+    displayText1.textContent = "SD+";
+    displayText2.textContent = "Ser. No: 200520";
+
+    // wait 4 seconds
+    await sleep(4000);
 
     // add wip text with 0002 error code
     displayText1.textContent = "Work in progress";
