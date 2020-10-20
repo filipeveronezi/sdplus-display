@@ -1,4 +1,26 @@
-@keyframes led {
+@keyframes ledOff {
+  0% {
+    box-shadow: 0px 0px 5px 0 red;
+    background: red;
+  }
+  100% {  
+    box-shadow: none;
+    background: darkred;
+  }
+}
+
+@keyframes ledOn {
+  0% {
+    box-shadow: none;
+    background: darkred;
+  }
+  100% {
+    box-shadow: 0px 0px 5px 0 red;
+    background: red;
+  }
+}
+
+@keyframes ledBlink {
   0% {
     box-shadow: none;
     background: darkred;
@@ -10,6 +32,18 @@
   100% {
     box-shadow: none;
     background: darkred;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -25,8 +59,29 @@
   }
 }
 
-.animate-led {
-  animation-name: led;
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-ledOff {
+  animation-name: ledOff;
+  animation-duration: .8s;
+  animation-fill-mode: forwards;
+}
+
+.animate-ledOn {
+  animation-name: ledOn;
+  animation-duration: .8s;
+  animation-fill-mode: forwards;
+}
+
+.animate-ledBlink {
+  animation-name: ledBlink;
   animation-duration: .6s;
   animation-delay: 0;
   animation-iteration-count: infinite;
@@ -36,4 +91,17 @@
   animation-name: float;
   animation-duration: 4s;
   animation-iteration-count: infinite;
+}
+
+.animate-blink {
+  animation-name: blink;
+  animation-duration: .6s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+}
+
+.animate-fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
 }

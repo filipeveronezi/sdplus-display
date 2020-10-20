@@ -4,46 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="./public/css/main.css" />
     <link rel="stylesheet" href="./public/css/page-landing.css" />
     <link rel="stylesheet" href="./public/css/animations.css" />
-    
+
     <title>SD+ | Filipe Veronezi</title>
-    <link rel="icon" href="./public/images/3d.png">
+    <link rel="icon" href="./public/images/3d.png" />
   </head>
   <body>
     <div class="sdplus animate-float">
-        <div class="logo-container">
-            <img src="./public/images/tt-logo.png" alt="" class="tt-logo">
-            <p class="sdplus-text">
-                SD+
-            </p>
-        </div>
-        <div class="display">
-          <p class="display-text">
-              Work in progress<br>
-              0002
-          </p>
-        </div>
-        <div class="divider"></div>
-        <div class="leds">
-            <div class="led"></div>
-            <div class="led"></div>
-            <div class="led"></div>
-            <div class="led"></div>
-            <div class="led"></div>
-            <div class="led"></div>
-            <div class="led"></div>
-            <div class="led animate-led"></div>
-        </div>
-        <div class="buttons">
-            <button type="button" class="button" id="p-button">P</button>
-            <button type="button" class="button" id="up-button">⇡</button>
-            <button type="button" class="button" id="down-button">⇣</button>
-            <button type="button" class="button" id="enter-button">⇠</button>
-        </div>
+      <div class="logo-container">
+        <img src="./public/images/tt-logo.png" alt="" class="tt-logo" />
+        <p class="sdplus-text">SD+</p>
+      </div>
+      <div class="display">
+        <p class="display-text-1"></p>
+        <p class="display-text-2"></p>
+      </div>
+      <div class="divider"></div>
+      <div class="leds">
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+      </div>
+      <div class="buttons">
+        <button
+          onclick="buttonPressed(event)"
+          type="button"
+          class="button"
+          id="p-button"
+        >
+          P
+        </button>
+        <button
+          onclick="buttonPressed(event)"
+          type="button"
+          class="button"
+          id="up-button"
+          onmousedown=""
+          onmouseover=""
+        >
+          ⇡
+        </button>
+        <button
+          onclick="buttonPressed(event)"
+          type="button"
+          class="button"
+          id="down-button"
+        >
+          ⇣
+        </button>
+        <button
+          onclick="buttonPressed(event)"
+          type="button"
+          class="button"
+          id="enter-button"
+        >
+          ⇠
+        </button>
+      </div>
     </div>
+    <aside class="options">
+        <label for="on-off" class="on-off">
+            <input type="checkbox" id="on-off">
+            <img class="switch" src="./public/images/power-button.svg" alt="Power button">
+        </label>
+    </aside>
+    <script src="./public/scripts/script.js"></script>
   </body>
 </html>
