@@ -8,12 +8,12 @@
 
   .mobile-text {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 30px;
+    font-size: 1.5rem;
     margin: 1rem;
   }
 
   .mobile-text:first-child {
-    font-size: 60px;
+    font-size: 4rem;
   }
 
   .sdplus{
