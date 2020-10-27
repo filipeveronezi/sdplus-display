@@ -8,7 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="./public/css/main.css" />
     <link rel="stylesheet" href="./public/css/page-landing.css" />
@@ -43,47 +46,21 @@
         <div class="led"></div>
       </div>
       <div class="buttons">
-        <button
-          onclick="buttonPressed(event)"
-          type="button"
-          class="button"
-          id="p-button"
-        >
-          P
-        </button>
-        <button
-          onclick="buttonPressed(event)"
-          type="button"
-          class="button"
-          id="up-button"
-          onmousedown=""
-          onmouseover=""
-        >
-          ⇡
-        </button>
-        <button
-          onclick="buttonPressed(event)"
-          type="button"
-          class="button"
-          id="down-button"
-        >
-          ⇣
-        </button>
-        <button
-          onclick="buttonPressed(event)"
-          type="button"
-          class="button"
-          id="enter-button"
-        >
-          ⇠
-        </button>
+        <button disabled type="button" class="button" id="p-button">P</button>
+        <button disabled type="button" class="button" id="up-button">⇡</button>
+        <button disabled type="button" class="button" id="down-button">⇣</button>
+        <button disabled type="button" class="button" id="enter-button">⇠</button>
       </div>
     </div>
     <aside class="options">
-        <label for="on-off" class="on-off">
-            <input type="checkbox" id="on-off">
-            <img class="switch" src="./public/images/power-button.svg" alt="Power button">
-        </label>
+      <label for="on-off" class="on-off">
+        <input type="checkbox" id="on-off" />
+        <img
+          class="switch"
+          src="./public/images/power-button.svg"
+          alt="Power button"
+        />
+      </label>
     </aside>
     <script type="module" src="./public/scripts/main.js"></script>
   </body>

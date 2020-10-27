@@ -210,7 +210,7 @@
     box-shadow: 1px 1px 4px -1px black;
   
     outline: none;
-    cursor: pointer;
+    cursor: not-allowed;
   }
   
   .button:active {

@@ -11,7 +11,7 @@ import {
   removeLedBlink,
   addBlink,
   removeBlink,
-} from "./functions.js";
+} from "./actions.js";
 
 import {
   chkOnOff,
@@ -34,16 +34,6 @@ async function onOff() {
     chkOnOff.disabled = true;
     checkbox.disabled = true;
     checkbox.style.cursor = "not-allowed";
-
-    //disable display buttons until animation is done
-    pButton.disabled = true;
-    pButton.style.cursor = "not-allowed";
-    upButton.disabled = true;
-    upButton.style.cursor = "not-allowed";
-    downButton.disabled = true;
-    downButton.style.cursor = "not-allowed";
-    enterButton.disabled = true;
-    enterButton.style.cursor = "not-allowed";
 
     // initialize delay variable
     let delay = 0;
@@ -116,6 +106,17 @@ async function onOff() {
     enterButton.disabled = false;
     enterButton.style.cursor = "pointer";
   } else {
+
+    //disable display buttons until animation is done
+    pButton.disabled = true;
+    pButton.style.cursor = "not-allowed";
+    upButton.disabled = true;
+    upButton.style.cursor = "not-allowed";
+    downButton.disabled = true;
+    downButton.style.cursor = "not-allowed";
+    enterButton.disabled = true;
+    enterButton.style.cursor = "not-allowed";
+    
     // turn off all the leds
     leds.forEach((element) => {
       removeAnimationDelay(element);
@@ -134,24 +135,3 @@ async function onOff() {
 }
 
 export { onOff };
-
-function buttonPressed(event) {
-  //console.log(event.target.id);
-  id = event.target.id;
-
-  if (id == "p-button") {
-    console.log("P");
-  }
-
-  if (id == "up-button") {
-    console.log("Up");
-  }
-
-  if (id == "down-button") {
-    console.log("Down");
-  }
-
-  if (id == "enter-button") {
-    console.log("Enter");
-  }
-}
