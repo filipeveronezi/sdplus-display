@@ -1,64 +1,33 @@
-// const variables
+// imports
+import {
+  sleep,
+  addAnimationDelay,
+  removeAnimationDelay,
+  addLedOn,
+  addLedOff,
+  addLedBlink,
+  removeLedOn,
+  removeLedOff,
+  removeLedBlink,
+  addBlink,
+  removeBlink,
+} from "./functions.js";
 
-// DOM elements
-let chkOnOff = document.querySelector("#on-off");
-let leds = document.querySelectorAll(".led");
-let checkbox = document.querySelector(".switch");
-let displayText1 = document.querySelector(".display-text-1");
-let displayText2 = document.querySelector(".display-text-2");
-let pButton = document.querySelector("#p-button");
-let upButton = document.querySelector("#up-button");
-let downButton = document.querySelector("#down-button");
-let enterButton = document.querySelector("#enter-button");
-
-// sleep function from https://medium.com/dev-genius/how-to-make-javascript-sleep-or-wait-d95d33c99909
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-//animation functions
-function addAnimationDelay(element, delay) {
-  element.style.animationDelay = delay + "ms";
-}
-
-function removeAnimationDelay(element) {
-  element.style.animationDelay = "0ms";
-}
-
-function addLedOn(element) {
-  element.classList.add("animate-ledOn");
-}
-
-function addLedOff(element) {
-  element.classList.add("animate-ledOff");
-}
-
-function addLedBlink(element) {
-  element.classList.add("animate-ledBlink");
-}
-
-function removeLedOn(element) {
-  element.classList.remove("animate-ledOn");
-}
-
-function removeLedOff(element) {
-  element.classList.remove("animate-ledOff");
-}
-
-function removeLedBlink(element) {
-  element.classList.remove("animate-ledBlink");
-}
-
-function addBlink(element) {
-  element.classList.add("animate-blink");
-}
-
-function removeBlink(element) {
-  element.classList.remove("animate-blink");
-}
+import {
+  chkOnOff,
+  leds,
+  checkbox,
+  displayText1,
+  displayText2,
+  pButton,
+  upButton,
+  downButton,
+  enterButton,
+} from "./dom.js";
 
 // ON/OFF animation
-chkOnOff.onclick = async () => {
+async function onOff() {
+
   // verify if checkbox is checked
   if (chkOnOff.checked) {
     // disable on/off button until animation is done
@@ -162,7 +131,9 @@ chkOnOff.onclick = async () => {
     });
     return;
   }
-};
+}
+
+export { onOff };
 
 function buttonPressed(event) {
   //console.log(event.target.id);
